@@ -4,7 +4,9 @@ ENV REMOTEUSER="root"
 ENV REMOTEPASS="NOPASS"
 ENV INVENTARIO="servers"
 COPY ./Agent/Execute.sh /
-RUN dnf install -y epel-release && dnf install -y  ansible && dnf install -y wget && \
+RUN dnf install -y epel-release wget && \
+    dnf install -y python3 && \
+    dnf install -y  ansible && \
     dnf install -y openssh && \
     dnf install -y git && \
     chmod u+x Execute.sh && \
