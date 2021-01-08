@@ -11,7 +11,7 @@
   - name: Copy ansible facts to a file.
     copy:
       content: "{{ ansible_facts.packages }}"
-      dest: ./inventory/{{ ansible_hostname }}_packages.json     
+      dest: /AnsibleCMDB/inventory/{{ ansible_hostname }}_packages.json     
     delegate_to: localhost    
   - name : Get Facts
     ansible.builtin.debug:
@@ -19,6 +19,6 @@
   - name: Copy ansible facts to a file.
     copy:
       content: "{{ ansible_facts }}"
-      dest: ./inventory/{{ ansible_hostname }}_facts.json     
+      dest: /AnsibleCMDB/inventory/{{ ansible_hostname }}_facts.json     
     delegate_to: localhost      
   
