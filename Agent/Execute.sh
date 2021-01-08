@@ -17,4 +17,5 @@ git config --global user.email "juanpablo@lazaroalonso.com"
 git config --global user.name "jplazaro"
 git commit -m "Actualize Inventory"
 git push origin
+sleep 3600
 
